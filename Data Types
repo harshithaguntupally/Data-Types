@@ -1,0 +1,176 @@
+7th JAN
+
+
+#java
+
+data types:
+
+1. dynamically typed language: 2 types
+	- primitive (predefined data types)- stores single values
+	- non- primitive
+2.to check the data type we use TYPEOF  operator
+                                 ***** 
+
+PRIMITIVE DATA TYPES:
+********************
+
+.predefined data types- stores single values
+
+1. Numbers : integers, floats
+             (ex: 1,-2,3.3,-4.4)
+
+2. String : Stream of characters enclosed in quotes
+      -single quotes
+      - double quotes
+      - backtick quotes
+3. Boolean : true or false values
+4. null: empty value or no value
+5. undefined : declared variable with no values
+
+
+1. Numbers : integer, floats
+
+EXAMPLE 1 :
+**********
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let b=-3.5
+        let a='3.5'
+        console.log(typeof(a))
+        document.write(typeof(a),<br>)
+        document.write(typeof(b))
+    </script>
+</body>
+</html>
+
+// output : number
+	    string
+
+
+
+2. String : Stream of characters enclosed in quotes
+      -single quotes
+      - double quotes
+      - backtick quotes
+. single quotes and double quotes works same
+. Backticks introduced in ES6 version
+. it provides extra functionlity
+ 
+
+
+ EXAMPLE 2 :
+**********
+
+let a = 3.5
+        console.log("hi" + a)
+
+// output hi3.5
+
+
+EXAMPLE : 3
+***********
+
+let a = 3.5
+        let b = -3.5
+        console.log("hi + a ")
+        console.log('hi +${a+b}')
+
+
+
+ EXAMPLE : 4
+*************
+
+let a = 3.5
+        let b = -3.5
+        console.log("hi + a+b" )
+        console.log('hi +${a + b}')
+        document.write("hi + a+b")
+        document.write('hi +${a + b}')
+
+// OUTPUT :hi + a+b
+           hi +${a + b}
+
+
+EXAMPLE :5
+**********
+
+let a = 3.5
+        let b = -3.5
+        console.log("hi + a+b" )
+        console.log('hi +${a + b}')
+        document.write("hi + a+b","<br>")
+        document.write(`hi +${a + b}`) When we use back ticks no value prints( empty value takes place)
+
+//OUTPUT : hi + a+b
+	   hi +0
+
+EXAMPLE 6:
+*********
+
+let a = 3.5
+        let b = 3.5
+        console.log("hi + a+b" )
+        document.write("hi + a+b","<br>")
+        console.log('hi + a+b' )
+        document.write('hi + a+b',"<br>")
+        console.log(`hi +${a + b}`)
+        document.write(`hi +${a + b}`)
+
+OUTPUT :  hi + a+b    output changes when we take positive numbers
+	        hi + a+b
+	        hi +7
+
+EXAMPLE 7:
+*********
+
+let a = 3.5
+        let b = 3.5
+
+        document.write(a+b,"<br>")
+        console.log("hi + a+b" )
+        document.write("hi + a+b","<br>")
+
+        console.log('hi + a+b' )
+        document.write('hi + a+b',"<br>")
+
+        console.log(`hi +${a + b}`)
+        
+        document.write(`hi +${a + b}`)
+        
+
+// OUTPUT : 7
+	    hi + a+b
+	    hi + a+b
+	    hi +7
+
+
+EXAMPLE 8:
+**********
+
+let a = "Harshitha"
+        let b = "Chowdary"
+        let age=20
+        let greeting =`I am ${a+" "+b}, my age is ${age} years old`
+        console.log(greeting)
+        document.write(greeting)
+
+// OUTPUT : I am Harshitha Chowdary, my age is 20 years old
+
+
+EXAMPLE 9:
+**********
+
+let x = null;
+        document.write(x,"<br>")
+        document.write(typeof(x))
+
+// OUTPUT :null
+	   object
