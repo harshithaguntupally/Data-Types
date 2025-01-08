@@ -1,0 +1,266 @@
+8th JAN :
+
+
+JAVA SCRIPT OPERATORS :
+**********************
+
+1.Arithematic operators
+2.Assignment operators
+3.relational operators
+4.logical operators
+5. ternary operators
+
+
+1.Arithematic operators:
+***********************
+
+       Addition  -  '+',
+       Subtraction  -  '-',
+       Multiplication  -  '*',
+       Division  -  '/',
+       Modus Operator  -  '%' ,
+       Exponential(raised to the power)  -  '**' ,
+       ++ ,
+
+
+
+Example 1:
+*********
+
+<script>
+        let a= 5;
+        let b=10;
+        
+        document.write(a%b, "<br>")
+        document.write(a/b ,"<br>")
+        document.write(a*b, "<br>")
+        document.write(a**b)
+    </script>
+
+// OUTPUT :
+
+5
+0.5
+50
+9765625
+
+
+EXAMPLE 2:
+*********
+
+<script>
+        let a= 5;
+        let b=10;
+            b++
+            document.write (b,"<br>")
+            a--
+            document.write(a,"<br>")
+        document.write(a%b, "<br>")
+        document.write(a/b ,"<br>")
+        document.write(a*b, "<br>")
+        document.write(a**b)
+    </script>
+
+// OUTPUT :
+
+11
+4
+4
+0.36363636363636365
+44
+4194304
+
+
+2.Assignment Operators : Assigning a value to a variable
+***********************
+
+var a = "Harshitha"
+
++=
+-=
+%=
+/=
+
+example :
+********
+
+<script>
+        let a= 10;
+        let b=5;
+        b-=30
+        document.write(b,"<br>")
+        a+=30  //a=a+30
+        document.write(a)
+
+        
+    </script>
+
+// OUTPUT :
+
+-25
+40
+
+3.Logical Operator
+******************
+
+1.And - (&&)
+. T && T = T
+
+2.Or - (||)
+. T || F = T
+
+3.Not - (!) - OPPOSITE VALUES WILL BE DECLARED AS OUTPUT (TRUE CONDITION GIVES FALSE AND FALSE CONDITION GIVES TRUE)
+
+example:
+********
+
+<script>
+        let a= 10;
+        let b=5;
+        b=b-30
+        document.write(a>b && b>11 ,"<br>")
+        document.write(a>b || b>11 ,"<br>")
+        document.write(!(a<b) && (a>11));
+    </script>
+
+//OUTPUT :
+
+false
+true
+false
+
+
+4. Relational Operator - (Comparison) value
+**********************
+
+operators: <, >, <=, >=, ==, ===, !=, !==
+
+Example:
+********
+
+<script>
+        let a= 105;
+        let b=10;
+        document.write(a>b ,"<br>")
+        document.write(a<b ,"<br>")
+        document.write(a==b ,"<br>")
+        document.write(a>=b ,"<br>")
+        document.write(a<=b ,"<br>")
+        document.write(a===b ,"<br>")
+        document.write(a!=b ,"<br>")
+        document.write(a!==b ,"<br>")
+    </script>
+
+// OUTPUT :
+
+true
+false
+false
+true
+false
+false
+true
+true
+
+EX: if both variables are assigned with same numbers the relational operators output be
+
+
+<script>
+        let a= 105;
+        let b=105;
+        document.write(a>b ,"<br>")
+        document.write(a<b ,"<br>")
+        document.write(a==b ,"<br>")
+        document.write(a>=b ,"<br>")
+        document.write(a<=b ,"<br>")
+        document.write(a===b ,"<br>")
+        document.write(a!=b ,"<br>")
+        document.write(a!==b ,"<br>")
+    </script>
+
+//OUTPUT :
+
+false
+false
+true
+true
+true
+true
+false
+false
+
+
+
+5.Conditional Operator or Ternary Operator(?)
+*********************************************
+
+First evaluates an expression for true or false
+syntax :
+
+condition?e1:e2
+
+example:
+********
+
+ <script>
+        let t= 40
+        let r=(t>40) ? "Ac-off":"Ac-on"
+        document.write(r)
+    </script>
+
+//OUTPUT : Ac-on
+
+
+example:
+*******
+
+<script>
+        let t= 40
+        let r=(t>39) ? "Ac-off":"Ac-on"
+        document.write(r)
+    </script>
+
+//OUTPUT : Ac-off
+
+
+
+Printing Alert Message : (PROMPT) - defining user inputs
+**********************
+
+example 1:
+*********
+
+ <script>
+        alert ("HI HARSHITHA")
+        console.log(alert)
+    </script>
+
+// OUTPUT : "HI HARSHITHA"
+ prints "HI HARSHITHA" on window document page
+
+example 2:
+*********
+
+<script>
+        let name = prompt("Enter your name?")
+        alert(name)
+    </script>
+
+..display box to enter your name appears in window document page, when we enter a name it displays a alert message regarding on that name or message
+
+
+example 3:
+**********
+
+<script>
+        let aa = prompt()
+        let bb = prompt()
+        document.write(typeof(x))
+        console.log(aa+bb)
+        document.write(aa+bb)
+    </script>
+
+
+. Displays dialog box to enter aa and bb values then it display output (giving aa=10 and bb=10)
+
+// OUTPUT :undefined1010
