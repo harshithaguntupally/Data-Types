@@ -1,0 +1,156 @@
+9th JAN
+
+CONDITIONAL STATEMENTS:
+**********************
+
+. To make the set of instructions execute only when the given condition is true
+. Used to decide whether the code has to be executed or skip based on the given condition 
+. skip the code based on evaluation
+. Executes in a sequence (line by line)
+
+BLOCK OF CODE: Set of instructions
+*************
+* Executes when the specific condition is true
+
+
+CONDITION : An expression that evaluates the result(True or False)
+*********  
+            EX: console.log(5>6)
+
+METHODS :
+********
+. if
+. if-else
+. else if
+. switch
+. Ternary operator
+
+
+If:   - only one possible condition
+***
+. if the condition is true it executes other wise it will skip
+
+syntax :
+*******
+
+if(condition){
+block of code
+}
+
+executes only the block of code (condition) is true
+
+EXAMPLE: 1
+*******
+<script>
+        let a=4
+        let b=5
+        if (a<b){
+            document.write("hello world")
+        }
+ </script>
+
+// OUTPUT : "hello world"
+
+
+
+EXAMPLE : 2
+********
+<script>
+        let a=4
+        let b=5
+        if (a<b){
+            document.write("hello world","<br>")
+        }
+        document.write("hello harshitha")
+    </script>
+
+//OUTPUT:
+
+     hello world
+     hello harshitha
+
+
+
+EXAMPLE: 3
+********
+<script>
+        let a=4
+        let b=5
+        if (a>b){
+            document.write("hello world","<br>")
+        }
+        document.write("hello harshitha","<br>")
+    </script>
+
+
+// OUTPUT :hello harshitha
+
+
+
+ IF-ELSE : - if condition not satisfies print the else block
+***********
+
+EXAMPLE 1:
+**********
+
+<script>
+        let a=4
+        let b=5
+        if (a>b){
+            document.write("hello world","<br>")
+        }else{
+            document.write("Hi Manvitha","<br>")
+
+        }
+        document.write("Hi Harshitha")
+    </script>
+
+// OUTPUT :
+
+Hi Manvitha
+Hi Harshitha
+
+
+EXAMPLE 2 :
+**********
+
+<script>
+        let age=prompt("Enter your age?")
+        let name=prompt("Enter your name?")
+        if(age<18){
+            alert(name+ "you are to young to marry")
+        }else if(age>35){
+            alert(name+ "you are to old to marry")
+        }else{
+            alert(name+ "perfect age to marry")
+        }
+
+// OUTPUT :
+
+"Enter your age" :20
+"Enter your name" : G.Harshitha
+G.Harshitha perfect age to marry
+
+
+
+Example 2:
+*********
+
+<script>
+        let a=prompt("Enter your a score: ")
+        let b=prompt("Enter your b score: ")
+        let c=a+b
+        if((a>300 || b>300) && (c<500)){
+            alert(" valid to team up")
+        }else{
+            alert(" not valid to team up")
+        }
+    </script>
+
+// OUTPUT : 
+
+Enter your a score: 302
+Enter your b score: 100
+not valid to team up
+
+
