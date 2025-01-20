@@ -1,0 +1,121 @@
+20th JAN :
+*********
+
+
+Conditional statements :
+- writing block of code only once and executing them multiple times
+
+
+Loops: executes block of code several times
+*****
+
+1. for loop
+2. for in
+3. for of
+4. while
+5. do while
+
+
+1. for loop:
+************
+
+Syntax:
+
+for(initialisation; condition; update-expression{
+---block of code
+}
+
+loop starts - init
+
+
+PROGRAM 1 : Printing numbers from 1 to 5
+*********
+
+for(let i=1;i<=5;i++){
+console.log(i);
+document.write(i); 
+}
+
+OUTPUT : 12345
+
+
+PROGRAM 2 :
+
+for(let i=10 ; i<=15 ; i++){
+            console.log(i);  
+            document.write(i,"<br>");   
+           }
+
+OUTPUT :
+
+10
+11
+12
+13
+14
+15
+
+
+PROGRAM 3 :
+
+for(let i=2; i<=9 ; i=i+2){
+            console.log(i+3);  
+            document.write(i+3,"<br>");   
+           }
+OUTPUT : 
+
+5
+7
+9
+11
+
+INITIALIAZATION :
+
+
+//  i=2
+// 2<=9
+// 2+3=5
+// 5<=9
+// 5+2=7
+// 7<=9
+// 7+2=9
+// 9<=9
+// 9+2=11
+
+
+PROGRAM 3 : Reapeating a particular name 5 times
+**********
+
+for(let i=1 ; i<=5 ; i++){
+            console.log(i);  
+            document.write("Harshitha","<br>");   
+           }
+
+OUTPUT :
+
+Harshitha
+Harshitha
+Harshitha
+Harshitha
+Harshitha
+
+
+PROGRAM 3 :
+
+for(let i=1 ; i<=10 ; i++){ 
+            document.write("9*",i,"=",9*i,"<br>");  
+           }
+
+OUTPUT :
+
+9*1=9
+9*2=18
+9*3=27
+9*4=36
+9*5=45
+9*6=54
+9*7=63
+9*8=72
+9*9=81
+9*10=90
+
