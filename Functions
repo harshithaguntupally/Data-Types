@@ -1,0 +1,105 @@
+23RD JAN :
+
+FUNCTIONS :
+*********
+* A Function is reusable block of code
+* It can be call anywhere in the program
+* Reusable code - writing only once and using the existing code 
+* we can observe the same code in different arguments in order to display the result
+
+JAVA SCRIPT :
+***********
+
+Keyword = Function()
+
+Parameters =  values(variables) which are declared inside the () while declaring or defining a function
+
+Arguments = values which are passed through the parameters at the time of calling the function
+
+
+# SYNTAX:
+*********
+
+function greet( name)
+
+PROGRAM 1 :
+
+function greet(){
+        document.write("Hello")
+      }
+      greet()
+
+OUTPUT :Hello
+
+PROGRAM 2 :
+
+function greet(){
+        document.write("Hello")
+      }
+      greet()
+      document.write( " Hi Harshitha")
+      greet( )
+
+OUTPUT :
+
+Hello Hi Harshitha Hello
+
+
+PROGRAM 3
+********
+
+function greet(name){
+        document.write("Hello"+name)
+      }
+      let name = prompt(" Enter your name?")
+      greet(name)
+
+OUTPUT :
+
+Enter your name : Harshitha
+Hello Harshitha
+
+
+PROGRAM 4 :
+
+function greet(name){
+      }
+      greet()
+      let a=parseInt(prompt("Enter a:"))
+        let b=parseInt(prompt("Enter b:"))
+        sum(a,b)
+        function sum(a,b){
+            document.write("Sum is",(a+b))
+        }
+
+OUTPUT : Sum is4
+
+
+PROGRAM 5 :
+
+function a(aa ,bb){
+        return aa+bb;
+      }
+      let n1=parseInt(prompt("Enter a number n1:"))
+      let n2=parseInt(prompt("Enter a number n2:"))
+      let result=a(n1,n2);
+      document.write("Sum is :"+result)
+
+OUTPUT :
+n1=2
+n2=2
+Sum is4
+
+ANONYMOUS FUNCTION ;
+******************
+
+A Function without name , After we create a function with out name and we assign it to a variable
+EXAMPLE 1 :
+*********
+Sum = function(n1,n2){
+let r=n1+n2
+return r
+}
+document.write(Sum(8,9))
+
+OUTPUT : 17
