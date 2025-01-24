@@ -1,0 +1,124 @@
+24th JAN :
+
+ARROW FUNCTION :
+**************
+
+Es6 Version
+more readable and more structure
+anonymous function(lambda function)
+without function name but they are assigned to a variable
+
+EXAMPLE :
+
+1. Arrow functions without the parameters :
+*****************************************
+
+let C=()=>{
+document.write("Hi")
+}
+C();
+
+OUTPUT : Hi
+
+# Arrow functions;
+# Functions
+
+
+2. Arrow functions with the parameters :
+**************************************
+
+let x =(x,y)=>{
+document.write(x+y)
+}
+x(20,30)
+x(40,50)
+
+OUTPUT : 5090
+
+
+
+3. Arrow functions with one Argument :
+**************************************
+# without using paranthesis 
+
+
+let greet=x =>document.write(x);
+greet ("Hi")
+
+OUTPUT : Hi
+
+
+3. Arrow functions without Argument :
+************************************
+
+let greet=() =>document.write("Hi")
+greet ()
+
+OUTPUT : Hi
+
+
+3. Arrow functions as an expression :
+***********************************
+
+let age = 18;
+let welcome =(age<18)?
+()=>document.write("Hi Harshitha"):
+()=>document.write("Hi Manvitha);
+welcome()
+
+OUTPUT : Hi Manvitha
+
+
+4. SYNCHRONOUS AND ASYNCHRONOUS:
+   ****************************
+
+EX :1
+
+function task1(){
+document.write("Task1 : start","<br>")
+}
+function task2(){
+document.write("Task2 : start","<br>")
+}
+function task3(){
+document.write("Task3 : start")
+}
+task1()
+task2()
+task3()
+
+
+OUTPUT : 
+
+Task1 : start
+Task2 : start
+Task3 : start
+
+EX 2:
+
+document.write("Hi","<br>");
+setTimeout(() =>{
+document.write("I am waiting","<br>")
+},2000);
+document.write("I am in the lab")
+
+OUTPUT :
+
+Hi
+I am in the lab
+# After 2 Seconds:next part will be executed
+I am waiting
+
+EX 3 :
+
+function greet(name, callback){
+        document.write(`Hi, ${name}!`)
+        callback();
+
+    }
+    function sayGoodbye(){
+        document.write("Goodbye")
+    }
+    greet("sam",sayGoodbye)
+
+OUTPUT : Hi, sam!Goodbye
