@@ -1,0 +1,117 @@
+25th JAN
+
+5.CALLBACK FUNCTION() :
+**********************
+
+you can pass the callback function as argument to another function.
+
+Execution: The function receiving the callback will execute the callback at some point during its executions(offer at the end or after an asynchronous 
+            operation is done)
+
+
+EX : 
+ 
+function mainFunction(callback){
+document.write("Executing the main function ")
+callback() // here we call the call back function11:02 25-01-2025
+}
+function callbackFunction(){
+    document.write("callbackfunction executed")
+}
+mainFunction(callbackFunction)
+
+ OUTPUT : Executing the main function callbackfunction executed
+
+
+
+EXPLANATION :
+
+mainfunction takes a callback as parameter 
+callback function is passed to mainfunction inside the mainfunction, the callfunction function  is called the callback()
+
+
+
+EX 2:
+
+passing a named function as a callback
+
+function greet(name ,callback){
+            document.write("hello"+name);
+            callback();
+        }
+                            
+ // it will execute the callback function after greet function
+    function goodbye(){
+       document.write("GOOD BYEE!")
+}
+greet("Harshitha", goodbyee)
+
+
+
+EX 3: using anonymous function as callback :
+
+let greet=function(name){
+            document.write("hello" +name)
+        }
+        greet("Harshitha")
+
+OUTPUT : helloHarshitha
+
+
+******
+
+function greet(name , callback){
+            document.write("hello +name");
+            callback();
+        }
+        greet("Harshitha" ,function(){
+            document.write("a python developer");
+        
+        })
+OUTPUT : hello +name a python developer
+
+// we didn't passed a named function like goodbye;
+Instead of that we have defined a anonymous function directly
+
+
+Ex 4:  Asunchronus callback with setTimeout;
+
+ function fetchData(callback){
+        document.write("Fetching data...")
+       }setTimeout(function(){
+        document.write("Data fetched....");
+        callback()
+        /// Executes call back after a delay
+
+       }2000);
+       function processData(){
+        document.write("processing the fetched data..")
+
+       }
+       fetchData(processData);
+
+OUTPUT : 
+
+Fetching data
+data fetched...
+
+EX 2 : 
+function fetchData(callback){
+        document.write("Fetching data...")
+       setTimeout(function(){
+        document.write("Data fetched....");
+        callback() ;
+        /// Executes call back after a delay
+
+       },2000);
+       }
+       function processData(){
+        document.write("processing the fetched data..")
+
+       }
+       fetchData(processData);
+
+OUTPUT :
+Fetching data
+Data fetched....processing the fetched data..
+
