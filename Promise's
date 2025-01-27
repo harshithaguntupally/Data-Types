@@ -1,0 +1,101 @@
+A promise is a special javascript  object that represents the eventual completion( or failure) of an asynchronous operation
+1.three states
+1. Pending : The initial state, the promise is still waiting for the operation to finish
+2. Fulfilled : The operation completed successfully
+2. Rejected  : The operation failed
+
+EXP :
+To create a promise – new Promise();
+The promise constructor takes the function with two parameters:
+Resolve : To marl as the promise is successful
+Reject : To mark it is failed
+
+HANDLING :
+.then() method is called when the promise is fulfilled.
+It receives the result from the resolve();
+Catch() – method is called when promise is rejected;
+It receives the result from the reject();
+EX :
+let myPromise=new Promise((resolve ,reject)=>{
+            let success =  true
+            if(success){
+                resolve("The Operation was successfull")
+                }else{
+                    reject("The operation failed")
+
+}
+});
+myPromise
+.then(result=>{
+    document.write(result)
+})
+.catch(error=>{
+    document.write(error)
+}
+)
+OUTPUT : The Operation was successful
+
+CHAINING PRROMISES:
+You can have chain multiple .then()
+
+EX :
+let promise = new Promise((resolve, reject) => {
+        resolve(5);
+    });
+
+promise
+  .then((result) => {
+    document.write(result,"<br>");
+    return result * 2;
+  })
+  .then((result) => {
+    document.write(result,"<br>"); 
+    return result + 3;
+  })
+  .then((result) => {
+    document.write(result);
+  });
+OUTPUT :
+5
+10
+13
+
+1.PROMISE WITH SET TIME OUT :
+EX :
+
+Using SetTimeOut the promise will resolve after certain amount of time 
+let delayedPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise resolved after 2 seconds");
+    }, 2000); 
+});
+
+delayedPromise
+    .then(result => {
+        document.write(result); 
+    })
+    .catch(error => {
+        document.write("Error:", error);
+    });
+OUTPUT : Promise resolved after 2 seconds
+EX :
+let fetchData = new Promise((resolve,reject)=>{
+        let dataFetched=false
+        setTimeout(()=>{
+            if(dataFetched){
+                resolve("Data Fetched Successfully")
+            } else{
+                reject("Data Fetching Failed")
+            }
+        },2000)
+      }
+    )
+    fetchData
+    .then(result=>{
+        document.write(result)
+    })
+    .catch(error=>{
+        document.write(error)
+    }
+    )
+OUTPUT : Data Fetching Failed
