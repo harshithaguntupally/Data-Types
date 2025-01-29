@@ -1,0 +1,81 @@
+2. Getting an element by class name:
+Returns all elements having the same class name
+. Getting an element by className() – method returns an html collection object
+An html collection is an array like list of html elements
+Length property provides
+
+Ex
+<h1 class="a"> Harshitha</h1>
+    <h1 class="b"> Manvitha</h1>
+    <h1 class="c"> veena</h1>
+<script>
+Let x= document.getElementsByClassName(‘a’)
+document.write (x)
+
+EX :
+<h1 class="a"> Harshitha</h1>
+    <h1 class="b"> Manvitha</h1>
+    <h1 class="c"> veena</h1>
+<script>
+Let x= document.getElementsByClassName(‘a’)
+for(let i=; i<x.length ;i++){
+Document.write(x[i])
+}
+
+1. Getting an element by id
+h1 id=”a”> I AM HARSHITHA </h1>
+h1 id=”b”>I AM MANVITHA  </h1>
+<script>
+let x=document.getElementById(‘a’)
+document.write(x)
+
+4.	Getting an element by tag name -  This method takes a tagname
+
+<h1 class="a"> Harshitha</h1>
+    <h1 class="b"> Manvitha</h1>
+    <h1 class="c"> veena</h1>
+    <h1 class="c"> Hema</h1>
+<script>
+let x=document.getElementByTagName(‘h1’)
+document.write(x)
+for(let i=; i<x.length ;i++){
+document.write(x[i])
+}
+
+QUERY SELECTOR : 
+QUERY SELECTOR – Used to select the methods by ClassName and TagName
+. it selects only the first matching element
+
+EX :
+<h1 class="a"> Harshitha</h1>
+   <h1 class="b"> Manvitha</h1>
+<h1 class="a"> Harshitha srinivas</h1>
+
+<script>
+let x=document.querySelector(‘h1’)
+document.write(x)
+}
+
+QUERY SELECTOR All :
+Can be used to select html elements by its tag name or class name
+It  returns a node list which is similar to array like object 
+
+
+MANIPULATE ELEMENTS :
+To create a HTML element :
+-	Create element
+-	Document.createElement()
+-	The method takes an html element tagname as str
+
+Let t = doc.CreateElement(‘h1)
+t.className=”ha”
+t.textContent=”I am in hyd”
+console.log(t)
+
+ex:
+const t=[“Harshitha”,”manvitha”]
+for(let i=0; i<t.length; i++){
+let tt=doc.CreateElement(‘h1’)
+tt.className=”aa”
+tt.textContent=t[i];
+console.log(tt)
