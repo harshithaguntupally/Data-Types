@@ -1,0 +1,218 @@
+InsertBefore(): - insert a new node before an existing node as a child node of a specified parent
+•	requires a reference to both the new node and existing node you want to insert before
+
+
+EX :
+
+<div id="a">
+        <h1>hema</h1>
+        <h1>veena</h1>
+        <h1>Priya</h1>
+    </div>
+    <div id="b">
+        <h2>sanju</h2>
+        <h2>minnu</h2>
+        <h2>manvitha</h2>
+    </div>
+    <script>
+        let n=document.createElement('h1')
+        n.textContent="Harshitha"
+
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insert(n,l)
+
+Output :
+
+hema
+veena
+Priya
+sanju
+minnu
+manvitha
+
+
+EX : INSERT BEFORE 
+
+<div id="a">
+        <h1>hema</h1>
+        <h1>veena</h1>
+        <h1>Priya</h1>
+    </div>
+    <div id="b">
+        <h2>sanju</h2>
+        <h2>minnu</h2>
+        <h2>manvitha</h2>
+    </div>
+    <script>
+        let n=document.createElement('h1')
+        n.textContent="Harshitha"
+
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l)
+
+OUTPUT :
+
+hema
+veena
+Priya
+Harshitha
+sanju
+minnu
+manvitha
+
+
+EX :
+<div id="a">
+        <h1>hema</h1>
+        <h1>veena</h1>
+        <h1>Priya</h1>
+    <h1 id="r">Harshitha</h1>
+    </div>
+    <div id="b">
+        <h2>sanju</h2>
+        <h2>minnu</h2>
+        <h2>manvitha</h2>
+    </div>
+    <script>
+        let n=document.createElement('h1')
+        n.textContent="Harshitha"
+
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l)
+
+
+output :
+
+hema
+veena
+Priya
+Harshitha
+Harshitha
+sanju
+minnu
+manvitha
+
+
+EX :
+
+<div id="a">
+        <h1 id="rr">Guna</h1>
+        <h1>chandu</h1>
+        <h1 id="r">Harshitha</h1>
+    </div>
+    <div id="b">
+        <h2>nani</h2>
+        <h2>minnu</h2>
+        <h2>lokesh</h2>
+    </div>
+    <script>
+        //to insert rishitha before dhanush
+        let n=document.createElement('h1')
+        n.textContent='rishitha'
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l)
+        //to insert dhanush before guna
+        let nn=document.createElement('h1')
+        nn.textContent='Harshitha'
+        let pp=document.getElementById('a')
+        let ll=document.getElementById('rr')
+        p.insertBefore(nn,ll)
+    </script>
+
+OUTPUT :
+Harshitha
+Guna
+chandu
+rishitha
+Harshitha
+nani
+minnu
+lokesh
+ 
+EX : without h1 element
+<div id="a">
+        <h1 id="rr">Guna</h1>
+        <h1>chandu</h1>
+        
+    </div>
+    <div id="b">
+        <h2>nani</h2>
+        <h2>minnu</h2>
+        <h2>lokesh</h2>
+    </div>
+    <script>
+        //to insert rishitha before harshitha
+        let n=document.createElement('h1')
+        n.textContent='rishitha'
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l)
+        //to insert dhanush before guna
+        let nn=document.createElement('h1')
+        nn.textContent='Harshitha'
+        let pp=document.getElementById('a')
+        let ll=document.getElementById('rr')
+        p.insertBefore(nn,ll)
+    </script>
+
+OUTPUT :
+Harshitha
+Guna
+chandu
+rishitha
+nani
+minnu
+lokesh
+
+REMOVE ELEMENT:
+EX :
+<div id="a">
+        <h1 id="c">Harshitha</h1>
+        <h1>chandu</h1>
+    </div>
+    <div id="b">
+        <h2>Manvitha</h2>
+        <h2>minnu</h2>
+        <h2>sai</h2>
+    </div>
+    <script>
+        let p=document.getElementById("a")
+        let a=document.getElementById("c")
+        console.log(a)
+        p.removeChild(a)
+    </script>
+
+OUTPUT :
+chandu
+Manvitha
+minnu
+sai
+
+REPLACE() :
+EX : Replace into “MRU”  = replace children
+<div id="a">
+        <h1 id="c">Harshitha</h1>
+        <h1>chandu</h1>
+    </div>
+    <div id="b">
+        <h2>Manvitha</h2>
+        <h2>minnu</h2>
+        <h2>sai</h2>
+    </div>
+    <script>
+        let n = document.createElement("h1")
+        n.textContent = "MRU"
+
+        let p=document.getElementById("a")
+        p.replaceChildren(n)
+
+    </script>
+OUTPUT :
+MRU
+Manvitha
+minnu
+sai
