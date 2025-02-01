@@ -1,0 +1,161 @@
+SCENARIO BASED QUESTIONS :
+SCENARIO 1 :Voting Eligibility System
+You are tasked with building a system to check whether a person is eligible to vote. The System follow these rules:
+1.A person must be  at least 18 years old to vote
+2.if the person is a citizen,they are eligible to vote.
+3.If the person is not a citizen but  has passed a citizenship test, they are eligible to vote.
+4.If the person is under 18, they cannot vote
+ <script>
+        let age = parseInt(prompt("Enter your age:"))
+        
+        if(age>=18 ){
+            let citizen = confirm("Are you a citizen?")
+        let passedCitizenTest = confirm("Have you passed citizen test?")
+            document.write("You are eligible to vote")
+            
+            if(age>=18 && !citizen && passedCitizenTest){
+                document.write("You are eligible to vote")
+            }
+            
+        }else{
+            document.write("You are not eligible to vote")
+        }
+    </script>
+OUTPUT :
+Enter your age: 19
+Are you a citizen? : ok
+Have you passed citizen test? Ok
+You are eligible to vote
+ 
+
+
+Method 2 :
+
+  <script>
+        function isEligibleToVote(age, isCitizen, passedCitizenshipTest) {
+        if (age < 18) {
+            return "Not eligible to vote (Under 18)";
+        }
+        if (isCitizen || passedCitizenshipTest) {
+            return "Eligible to vote";
+        }
+        return "Not eligible to vote";
+    }
+    console.log(isEligibleToVote(20, true, false)); 
+    console.log(isEligibleToVote(17, false, true)); 
+    console.log(isEligibleToVote(25, false, true)); 
+    console.log(isEligibleToVote(30, false, false));
+    </script>
+
+Method 3:
+function checkVotingEligibility(age, isCitizen, passedCitizenshipTest) {
+            if (age < 18) {
+              return "You cannot vote because you are under 18.";
+            }
+          
+            if (isCitizen) {
+              return "You are eligible to vote!";
+            }
+          
+            if (passedCitizenshipTest) {
+              return "You are eligible to vote!";
+            }
+          
+            return "You are not eligible to vote because you are not a citizen and have not passed the citizenship test.";
+          }
+          
+          function main() {
+            const age = parseInt(prompt("Please enter your age:"));
+            const isCitizen = prompt("Are you a citizen? (yes/no):").toLowerCase() === "yes";
+            let passedCitizenshipTest = false;
+          
+            if (!isCitizen) {
+              passedCitizenshipTest = prompt("Have you passed the citizenship test? (yes/no):").toLowerCase() === "yes";
+            }
+          
+            const result = checkVotingEligibility(age, isCitizen, passedCitizenshipTest);
+          
+            console.log(result);
+            alert(result); 
+          }
+          
+          main();
+
+Method 3:
+
+  <h1> Voting Eligibility System</h1>
+  <label for="age">Enter your age:</label>
+  <input type="number" id="age" placeholder="Age" required><br><br>
+  <label for="citizen">Are you a citizen? (yes/no):</label>
+  <input type="text" id="citizen" placeholder="yes/no" required><br><br>
+  <label for="citizenshipTest">Did you pass the citizenship test? (yes/no):</label>
+  <input type="text" id="citizenshipTest" placeholder="yes/no" required><br><br>
+  <button onclick="checkEligibility()">Check Eligibility</button>
+  <p id="result"></p>
+  <script>
+    function checkEligibility() {
+      const age = parseInt(document.getElementById('age').value);
+      const isCitizen = document.getElementById('citizen').value.toLowerCase() === 'yes';
+      const passedCitizenshipTest = document.getElementById('citizenshipTest').value.toLowerCase() === 'yes';
+      let resultMessage = '';
+      if (age < 18) {
+        resultMessage = "You are not eligible to vote because you are under 18.";
+      } else if (isCitizen) {
+        resultMessage = "You are eligible to vote because you are a citizen.";
+      } else if (passedCitizenshipTest) {
+        resultMessage = "You are eligible to vote because you passed the citizenship test.";
+      } else {
+        resultMessage = "You are not eligible to vote.";
+      }
+      document.getElementById('result').textContent = resultMessage;
+    }
+  </script>
+
+SCENARIO 2 : Discount Eligibility
+An online store offers a ddiscount system based on the following conditions;
+1.A customer who spends more than Rs.100 gets a 20% discount.
+2.A customer who spends more than Rs.50 but less than or equal to Rs.100 gets a 10% discount
+3.If the customer is a premium member , they receive and extra 5% discount
+
+Method :
+<script>
+        function calculateDiscount(totalSpent, isPremiumMember) {
+            let discount = 0;
+        
+            if (totalSpent > 100) {
+                discount = 20;
+            } else if (totalSpent > 50 && totalSpent <= 100) {
+                discount = 10;
+            }
+        
+            if (isPremiumMember) {
+                discount += 5;
+            }
+        
+            return discount;
+        }
+        
+        const totalSpent = parseFloat(prompt("Enter the total amount spent:"));
+        const isPremiumMember = confirm("Are you a premium member? Click OK for Yes, Cancel for No.");
+        
+        const discount = calculateDiscount(totalSpent, isPremiumMember);
+        const finalAmount = totalSpent - (totalSpent * (discount / 100));
+        
+        document.write(`You received a $ {discount}% discount.`,"<br>");
+        document.write(`Final amount to pay: Rs ${finalAmount.toFixed(2)}`);
+    </script>
+    
+SCENARIO 3 : Event Attendance Eligibility
+An event system has the following eligibility rules
+1.	VIP Users can attend all events
+2.	Non-VIP users can with a special invitation can attend special events
+3.	Users under 18 cannot attend any events
+
+REACT.JS:
+It is a javascript library
+Predefined
+Used to create single page application
+User interface
+
+
+
