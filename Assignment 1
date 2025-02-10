@@ -1,0 +1,84 @@
+Give me some idea on what is a Data type. What are Primitive Data types and Non-Primitive Data types. Explain with some examples.
+
+DATA TYPE :
+A Data Type defines the type of data that a variable can store in a programming language. It determines what kind of operations can be performed on the data, how much memory it occupies, and how it is stored.
+Data types are generally categorized into two types
+
+1. Primitive Data Types 
+2. Non-Primitive Data Types
+
+1.Primitive Data Types :
+Primitive data types are the most basic types of data that are directly supported by the programming language. 
+They store simple values and occupy a fixed amount of memory.
+
+Examples of Primitive Data Types :
+
+1.Integer (int)
+Stores whole numbers.
+Example: int salary = 2500;
+
+2.Floating-point (float, double)
+Stores decimal numbers.
+Example: float interest = 1.88;
+
+3. Character (char)
+Stores a single character.
+Example: char grade = 'A';
+
+4. Boolean (bool)
+Stores true or false values.
+Example: bool isPassed = true;
+
+5. String (some languages treat it as primitive, others as non-primitive)
+Stores sequences of characters.
+Example: string Department = "CSE";
+
+Primitive data types are immutable, meaning they cannot be changed once assigned.
+
+2.Non-Primitive Data Types:
+
+Non-primitive data types are more complex and are derived from primitive data types. They can store multiple values and support various operations.
+
+Examples of Non-Primitive Data Types
+
+1.Arrays
+Stores multiple values of the same data type in a single variable.
+Example: int numbers[] = {1, 2, 3, 4, 5};
+
+2.Classes and Objects
+A class is a blueprint for creating objects. Objects store multiple related properties and methods.
+Example:
+cpp
+CopyEdit
+class Car {
+    public:
+        string brand = "Toyota";
+        int speed = 120;
+};
+Car myCar;
+cout << myCar.brand; // Output: Toyota
+
+
+Structures (structs)
+Groups different data types together under one name.
+Example:
+cpp
+CopyEdit
+struct Student {
+    string name;
+    int age;
+};
+Student s1 = {"John", 20};
+
+
+Pointers
+Stores the memory address of another variable.
+Example:
+cpp
+CopyEdit
+int x = 10;
+int *ptr = &x;
+
+
+Linked Lists, Stacks, Queues, Trees, Graphs
+These are advanced data structures used for efficient data storage and manipulation.
