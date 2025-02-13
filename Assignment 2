@@ -1,0 +1,37 @@
+function App() {
+  const name = "Harshitha";
+  const email = "2211cs010212@mallareddyuniversity.ac.in";
+
+  return (
+    <div>
+      <User1 data={{ name, email }} />
+    </div>
+  );
+}
+
+// User1 Component
+function User1({ data }) {
+  return <User2 data={data} />;
+}
+
+// User2 Component
+function User2({ data }) {
+  return <User3 data={data} />;
+}
+
+// User3 Component
+function User3({ data }) {
+  return <User4 data={data} />;
+}
+
+// User4 Component
+function User4({ data }) {
+  return (
+    <div>
+      <p>Name: {data.name}</p>
+      <p>Email: {data.email}</p>
+    </div>
+  );
+}
+
+export default App;
