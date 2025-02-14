@@ -1,0 +1,106 @@
+React Reducer() :
+A Reducer is a function that helps us to update( like score, a list) based on action we take
+1.	Current state : The current value of the state
+2.	Action : add or remove an item
+
+EX:
+import React ,{useReducer} from "react";
+
+function appleReducer(state=3,action){
+  switch(action.type){
+    case 'ADD_APPLE':
+      return state+1;
+    case 'EAT_APPLE':
+      return state-1;
+    default:
+      return state
+  }
+}
+
+function App(){
+  const[state,dispatch]=useReducer(appleReducer,3)
+  return(
+    <div style={{padding:'20px'}}> 
+      <h1> Apple Counter</h1>
+      <p> Number of Apples:{state}</p>
+      <button onClick={()=>dispatch({type:'ADD_APPLE'})}>ADD APPLE </button>
+      <button onClick={()=>dispatch({type:'EAT_APPLE'})}>EAT APPLE </button>
+    </div>
+  )
+}
+export default App
+
+EX 2: ADDING AND EATING APPLES THROUGH IMAGES
+
+import React,{useReducer} from "react";
+
+function appleReducer(state={count:3, apples:[]},action){
+  switch(action.type){
+    case 'ADD_APPLE':
+      return {count: state.count+1, apples: [...state.apples, 'apple']};
+    case 'EAT_APPLE':
+      if(state.count > 0){
+        return {count: state.count-1, apples: state.apples.slice(0, -1)};
+      }
+      return state;
+    default:
+      return state;
+  }
+}
+function App() {
+  const [state,dispatch]=useReducer(appleReducer,{count:3, apples:[]})
+  return (
+    <div>
+      <h1>Apple counter</h1>
+      <p>Number of apples:{state.count}</p>
+      <div>
+        {state.apples.map((apple, index) => (
+          <img key={index} src="https://tse3.mm.bing.net/th?id=OIP.kori7Y8NQzmHi4RLlD-T9AHaE5&pid=Api&P=0&h=180" alt="apple" />
+        ))}
+      </div>
+      <button onClick={()=>dispatch({type:'ADD_APPLE'})}>ADD APPLE</button>
+      <button onClick={()=>dispatch({type:'EAT_APPLE'})}>EAT APPLE</button>
+    </div>
+  )
+}
+export default App;
+
+Callback in react :
+ In react , a call back is a function that is passed as an argument to another function
+. call backs are often to communicate with different components
+EX:
+A parent component passing as callback to a child
+. parent component displays a message; and child component has a button
+. when the button is clicked, the child will use callback and tells the parent component to update the message
+
+Child.js:
+
+import React from 'react';
+const Child=({ChangeMessage})=>{
+    return(
+        <button onclick={ChangeMessage}> Click Me </button>
+    )
+}
+export default Child;
+
+App.js :
+import React ,{useState} from "react";
+import Child from './Child';
+
+const Parent=()=>{
+  const [message,setMessage]=useState("Hello World")
+
+  const changeMessage=()=>{
+    setMessage("You clicked the button")
+
+  };
+
+  return(
+    <div>
+      <h1>{message}</h1>
+      
+      <Child changeMessage={changeMessage}/>
+    </div>
+  )
+}
+export default P
