@@ -1,0 +1,118 @@
+EVENT HANDLING :
+Event Handling in react is how you make your app do some thing When the user interacts with it, Like Clicking a button, Submitting a form
+1.	Clicking a button(onClick)
+2.	Pressing s key(KeyDown)
+3.	Moving the Mouse(onMouseMove)
+4.	Typing a textbox(onTextChange)
+HOW TO USE EVENTS IN REACT :
+Use camelCase for event names
+Pass a function to the event( not a function call)
+This function will run when the event will happens
+
+a)	ClickEvent: (onClick):
+Ex:
+function App(){
+  const handleClick=()=>{
+    alert("Button Clicked")
+  };
+  return(
+    <button onClick>{handleClick}Click Me</button>
+  )
+}
+export default App;
+
+b. change event(onChange) :
+this happens when you type in the text box
+target is the property of event object, which is predefined by javascript for DOM EVENTS
+event.target : always refers the elements which triggers the event
+event.target : 
+
+
+EX:
+import React ,{useState} from 'react';
+function App(){
+  const[text, setText]=useState("")
+  const handleChange=(event)=>{
+    setText(event.target.value)
+  }
+  return(
+    <div>
+      <input type="text" value={text} onChange={handleChange}/>
+      <p>Your Text:{text}</p>
+    </div>
+  )
+}
+export default App;
+
+OUTPUT :
+ 
+3.	MouseEvent():
+This happens when we  are on the move the mouse
+
+EX:
+import React ,{useState} from 'react';
+function App(){
+  const[isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter =  ()=>{
+    setIsHovered(true);
+
+  }
+  const handleMouseLeave = () =>{
+    setIsHovered(false);
+  };
+  return(
+    <div>
+      <button
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        backgroundColor: isHovered ? 'blue' :'red',
+        color: isHovered ? 'white' : 'black'
+      }} >Hover ME</button>
+      {isHovered && <p> Mouse is over the button</p>}
+    </div>
+  )
+}
+export default App;
+
+
+KEY EVENTS :
+Key is pressed on the keyboard:
+
+SYNTAX:
+onKeyDown ={KeyDownFunction}
+== KeyDownFunction : this is a function that runs whenever any key  is pressed on the keyword
+
+=Return Type: 
+
+EX:
+import React,{ useState } from "react";
+import "./App.css"
+function App(){
+
+  const[key, setKey]=useState("");
+
+  const handleKeyDown=(event)=>{
+    setKey(event.key);
+  }
+
+  return(
+    <div className="App">
+      <h1>WELCOME </h1>
+      {key && <h2>Pressed key : {key}</h2>}
+      <input type="text" onKeyDown={handleKeyDown} placeholder="Press any key"/>
+    </div>
+    )
+}
+export default App;
+
+
+
+
+
+
+
+
+
+
